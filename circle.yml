@@ -16,6 +16,6 @@ test:
 deployment:
     staging:
         branch: master
-        message: "Site updated:"
-        heroku:
-            appname: sample_app
+        commands:
+            - git push git@heroku.com:sample_app.git $CIRCLE_SHA1:master
+            - heroku  run rake db:migrate --app sample_app
