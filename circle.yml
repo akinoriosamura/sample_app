@@ -17,5 +17,5 @@ deployment:
     staging:
         branch: master
         message: "Site updated:"
-        commands:
-            - git push heroku master:
+        heroku:
+            appname: sample_app
