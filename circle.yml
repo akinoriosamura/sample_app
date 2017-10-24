@@ -12,10 +12,3 @@ dependencies:
 test:
   override:
       - bundle exec rake test
-
-deployment:
-    staging:
-        branch: master
-        commands:
-            - git push heroku master
-            - heroku  run rake db:migrate --app sample_app
