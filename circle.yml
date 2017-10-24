@@ -6,7 +6,7 @@ machine:
       2.4.2
 dependencies:
   override:
-    - bundle install:
+    - bundle install
         timeout: 180
 """
 database:
@@ -18,5 +18,11 @@ database:
 """
 test:
   override:
-      - bundle exec rake test:
+      - bundle exec rake test
 
+deployment:
+    staging:
+        branch: master
+        commands:
+            - git push heroku master
+            - heroku open
