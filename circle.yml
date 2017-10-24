@@ -17,5 +17,5 @@ deployment:
     staging:
         branch: master
         commands:
-            - git push git@heroku.com:sample_app.git $CIRCLE_SHA1:master
+            - git push heroku master
             - heroku  run rake db:migrate --app sample_app
