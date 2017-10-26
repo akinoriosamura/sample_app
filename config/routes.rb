@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "contact" => 'static_pages#contact'
 
   get "signup" => 'users#new'
+  resources:users
 end
